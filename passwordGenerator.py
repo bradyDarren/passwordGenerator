@@ -9,17 +9,13 @@ nums = string.digits
 
 # Function that will make a choice between an uppercase alpha character or a lowercase alpha character.
 def upper_or_lower(upper_list, lower_list):
-    
+
     alpha_choice = [upper_list, lower_list]
     list_options = random.choice(alpha_choice)
     if list_options == upper_list: 
         return random.choice(upper_list)
     elif list_options == lower_list:
         return random.choice(lower_list)
-    
-
-
-    
 
 # total_count = input("How many characters total would you like your password to be?")
 
