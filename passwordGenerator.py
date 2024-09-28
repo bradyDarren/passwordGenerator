@@ -1,11 +1,9 @@
 # Randomly generate a combination of letters, numbers, and symbols. 
 import random
+import string
 
-alpha_chars = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'] 
-
-alpha_rand = random.choice(alpha_chars)
-
-print(alpha_rand)
+alpha_upper = string.ascii_uppercase
+alpha_lower = string.ascii_lowercase
 
 total_count = input("How many characters total would you like your password to be?")
 
