@@ -33,11 +33,16 @@ def symbol(symbol_list):
             return rand_symbol
 
 def number(nums_list):
-    rand_nums = random.choice(nums)
+    rand_nums = random.choice(nums_list)
     return rand_nums
 
-for x in range(int(total_count)):
-    a = upper_or_lower(alpha_upper,alpha_lower)
-    b = symbol(symbols)
-    c = number(nums)
-    print(a+b+c)
+def complete_password(char_count):
+    password = ""
+    while len(password) <= int(char_count):
+        password += upper_or_lower(alpha_upper, alpha_lower)
+        password += symbol(symbols)
+        password += number(nums)
+    return password
+
+print(complete_password(total_count))
+
