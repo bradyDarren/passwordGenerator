@@ -7,6 +7,12 @@ alpha_lower = string.ascii_lowercase
 symbols = string.punctuation
 nums = string.digits
 
+total_count = input("How many characters total would you like your password to be?")
+
+alpha_count = input("How many alphabetical characters would you like to be included in your password? : ")
+num_count = input("How many numerical characters would you like to be included in your password? : ")
+symbol_count = input("How man symbols would you like included in your password? : ")
+
 # Function that will make a choice between an uppercase alpha character or a lowercase alpha character.
 def upper_or_lower(upper_list, lower_list):
 
@@ -17,9 +23,12 @@ def upper_or_lower(upper_list, lower_list):
     elif list_options == lower_list:
         return random.choice(lower_list)
 
-# total_count = input("How many characters total would you like your password to be?")
-
-# alpha_count = input("How many alphabetical characters would you like to be included in your password? : ")
-# num_count = input("How many numerical characters would you like to be included in your password? : ")
-# symbol_count = input("How man symbols would you like included in your password? : ")
-
+# Function that will choose a random symbol and remove backticks (``), backslashes(\), and forwardslashes (/)
+def symbol(symbol_list):
+    unapproved_symbols = ['`','/','\\']
+    rand_symbol = random.choice(symbol_list)
+    while True: 
+        if rand_symbol in unapproved_symbols:
+            continue
+        else: 
+            break
