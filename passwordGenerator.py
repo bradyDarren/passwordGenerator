@@ -26,9 +26,9 @@ def upper_or_lower(upper_list, lower_list):
 # Function that will choose a random symbol and remove backticks (``), backslashes(\), and forwardslashes (/)
 def symbol(symbol_list):
     unapproved_symbols = ['`','/','\\']
-    rand_symbol = random.choice(symbol_list)
     while True: 
+        rand_symbol = random.choice(symbol_list)
         if rand_symbol in unapproved_symbols:
             continue
         else: 
-            break
+            return rand_symbol
