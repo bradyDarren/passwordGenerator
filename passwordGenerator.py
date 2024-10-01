@@ -32,17 +32,25 @@ def symbol(symbol_list):
         else: 
             return rand_symbol
 
+# Function that will choose a random number
 def number(nums_list):
     rand_nums = random.choice(nums_list)
     return rand_nums
 
+# Function that will choose a loop
 def complete_password(char_count):
     password = ""
-    while len(password) <= int(char_count):
+    while len(password) < int(char_count):
         password += upper_or_lower(alpha_upper, alpha_lower)
+        if len(password) == int(char_count):
+            break
         password += symbol(symbols)
+        if len(password) == int(char_count):
+            break
         password += number(nums)
+        if len(password) == int(char_count):
+            break
     return password
 
+# print(len(complete_password(total_count)))  # Test Line
 print(complete_password(total_count))
-
