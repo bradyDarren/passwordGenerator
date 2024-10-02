@@ -39,17 +39,18 @@ def number(nums_list):
 
 # Function that will choose a loop
 def complete_password(char_count):
+    options = [upper_or_lower, symbol, number]
     password = ""
     while len(password) < int(char_count):
-        password += upper_or_lower(alpha_upper, alpha_lower)
+        selection = random.choice(options)
         if len(password) == int(char_count):
             break
-        password += symbol(symbols)
-        if len(password) == int(char_count):
-            break
-        password += number(nums)
-        if len(password) == int(char_count):
-            break
+        elif selection == upper_or_lower:
+            password += upper_or_lower(alpha_upper, alpha_lower)
+        elif selection == symbol: 
+            password += symbol(symbols)
+        elif selection == number: 
+            password += number(nums)
     return password
 
 # print(len(complete_password(total_count)))  # Test Line
