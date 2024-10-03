@@ -7,7 +7,7 @@ alpha_lower = string.ascii_lowercase
 symbols = string.punctuation
 nums = string.digits
 
-alpha_count = input("How many alphabetic characters would you like in your password? :")
+alpha_count = input("How many alphabetic characters would you like in your password? : ")
 num_count = input("How many numerical characters would you like to be included in your password? : ")
 symbol_count = input("How man symbols would you like included in your password? : ")
 
@@ -35,23 +35,7 @@ def number(nums_list):
     rand_nums = random.choice(nums_list)
     return rand_nums
 
-# Function that will choose a loop
-# def complete_password():
-#     options = [upper_or_lower, symbol, number]
-#     password_list = []
-#     char_count = int(alpha_count) + int(num_count) + int(symbol_count)
-#     while len(password_list) < char_count:
-#         selection = random.choice(options)
-#         if len(password_list) == char_count:
-#             break
-#         elif selection == upper_or_lower:
-#             password_list.append(upper_or_lower(alpha_upper, alpha_lower))
-#         elif selection == symbol: 
-#             password_list.append(symbol(symbols))
-#         elif selection == number: 
-#             password_list.append(number(nums))
-#     return password_list
-
+# Function that will select random alpha characters, numbers, and symbols.
 def complete_password():
     password_list = []
     char_count = int(alpha_count) + int(num_count) + int(symbol_count)
