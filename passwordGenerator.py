@@ -7,7 +7,7 @@ alpha_lower = string.ascii_lowercase
 symbols = string.punctuation
 nums = string.digits
 
-alpha_count = input("How many alphabetic characters would you like in your password? :")
+alpha_count = input("How many alphabetic characters would you like in your password? : ")
 num_count = input("How many numerical characters would you like to be included in your password? : ")
 symbol_count = input("How man symbols would you like included in your password? : ")
 
